@@ -1,6 +1,14 @@
 {
   "name": "book_search_app",
   "version": "1.0.0",
+  "babel": {
+    "presets": [
+      "es2015",
+      "es2016",
+      "es2017",
+      "react"
+    ]
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
