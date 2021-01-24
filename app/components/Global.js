@@ -24,6 +24,11 @@ class Global extends Component {
 						type="text" 
 						placeholder="Search for a book."
 						onChange={event => this.setState({query: event.target.value})}
+						onKeyPress={event => {
+							if (event.key === 'Enter') {
+								this.search();
+							}
+						}}
 						/>
 				    <InputGroup.Append onClick={() => this.search()}>
 				      <InputGroup.Text id="basic-addon2">search</InputGroup.Text>
