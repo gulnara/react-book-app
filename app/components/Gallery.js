@@ -6,9 +6,18 @@ class Gallery extends Component {
 			<div>
 				{
 					this.props.items.map((item, index) => {
-						let { title } = item.volumeInfo;
+						let { title, imageLinks, infoLink } = item.volumeInfo;
 						return (
-							<div key={index}>{title}</div>
+							<div key={index} className="book">
+							<img 
+								src={imageLinks !== undefined ? imageLinks.thumbnail : ''} 
+								alt="book image"
+								className="book-img"
+							/>
+								<div className="book-text">
+									{title}
+								</div>
+							</div>
 						)
 					})
 				}
